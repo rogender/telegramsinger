@@ -1,6 +1,8 @@
 # telegramsinger
 Небольшой проект, который поет песню, но от вашего аккаунта в телеграмме
 
+![Работа бота](https://github.com/rogender/telegramsinger/blob/main/screenshots/telegram_song.jpg) 
+
 ## Установка и использование
 Необходимо скачать [Termux](https://play.google.com/store/apps/details?id=com.termux) для Андроид(Если кратко, то это эмулятор терминала из Linux)
 
