@@ -26,7 +26,6 @@ print('Бот запущен. Пой песню)')
 
 @client.on_message(filters.regex('Хочешь песню?') & filters.me)
 def typesong(client, message):
-	sleep(3)
 	for i in range(0, len(lines)):
 		client.send_message(message.chat.id, lines[i])
 		sleep(conf["interval"])
