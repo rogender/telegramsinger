@@ -14,6 +14,9 @@
 - cd telegramsinger
 - python index.py
 
+Скорее всего, у вас попросят номер телефона и код, который придет вам в Telegram
+![Выбор аккаунта и его подтверждение](https://github.com/rogender/telegramsinger/blob/main/screenshots/termux_commands.jpg) 
+
 Чтобы от вашего лица начались писать сообщения, напишите в любом чате "Хочешь песню?" (без кавычек)
 
 ## Изменение текста песни
