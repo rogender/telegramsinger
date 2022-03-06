@@ -18,11 +18,11 @@ with open('song', 'r', encoding='utf-8') as f:
 			line = line.to_upper()
 		lines.append(line)
 
-client = Client('userbot pyrogram', api_id, api_hash)
+client = Client('BotSinger', api_id, api_hash)
 
 client.start()
 client.stop()
-print('Бот запущен. Пой песню)')
+print('TelegramSinger запущен. ')
 
 @client.on_message(filters.regex('Хочешь песню?|хочешь песню?') & filters.me)
 def typesong(client, message):
