@@ -26,8 +26,11 @@ print('TelegramSinger запущен. ')
 
 @client.on_message(filters.regex('Хочешь песню?|хочешь песню?') & filters.me)
 def typesong(client, message):
-	for i in range(0, len(lines)):
-		client.send_message(message.chat.id, lines[i])
+	try:
+		for i in range(0, len(lines)):
+			client.send_message(message.chat.id, lines[i])
 		sleep(conf["interval"])
+	except FloodWait as e:
+		sleep(e.x)
 
 client.run()
