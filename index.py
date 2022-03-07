@@ -1,7 +1,6 @@
 from time import sleep
 from config import conf
 from pyrogram import Client, filters, sync
-from pyrogram.errors import FloodWait
 
 # СЛЕДУЮЩИЕ ДВЕ СТРОЧКИ НЕ МЕНЯТЬ, В ПРОТИВНОМ СЛУЧАЕ ВСЁ СЛОМАЕТСЯ
 api_id = 18539672
@@ -22,15 +21,12 @@ client = Client('BotSinger', api_id, api_hash)
 
 client.start()
 client.stop()
-print('TelegramSinger запущен. ')
+print('TelegramSinger запущен.')
 
 @client.on_message(filters.regex('Хочешь песню?|хочешь песню?') & filters.me)
 def typesong(client, message):
-	try:
-		for i in range(0, len(lines)):
-			client.send_message(message.chat.id, lines[i])
-		sleep(conf["interval"])
-	except FloodWait as e:
-		sleep(e.x)
+	for i in range(0, len(lines)):
+		client.send_message(message.chat.id, lines[i])
+	sleep(conf["interval"])
 
 client.run()
