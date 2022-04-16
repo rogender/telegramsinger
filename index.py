@@ -27,5 +27,5 @@ print('TelegramSinger запущен.')
 def typesong(client, message):
 	for i in range(0, len(lines)):
 		client.send_message(message.chat.id, lines[i])
-                sleep(conf["interval"])
+		sleep(conf["interval"])
 client.run()
